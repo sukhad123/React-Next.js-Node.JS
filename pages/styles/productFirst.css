@@ -1,0 +1,38 @@
+.productFirst {
+    background-color: #A69F9F;
+    width: 150px;
+    height: 250px;
+}
+
+.productImage {
+    width: 150px;
+    height: 150px;
+}
+.producttImage {
+    width: 100%; /* Set image width to 100% of its container */
+    height: 100%; /* Set image height to 100% of its container */
+    object-fit: contain;
+}
+.productContent{
+    padding-left:10px;
+}
+.productList
+{
+    display:flex;
+}
+.title {
+    height: 18px;
+    overflow-y: auto;
+}
+.description {
+    height: 50px;
+    overflow-y: auto;
+}
+.title::-webkit-scrollbar {
+    width: 0; /* Set width to 0 to hide the scrollbar */
+    background: transparent; /* Optional: Set a transparent background */
+}
+.description::-webkit-scrollbar {
+    width: 0; /* Set width to 0 to hide the scrollbar */
+    background: transparent; /* Optional: Set a transparent background */
+}

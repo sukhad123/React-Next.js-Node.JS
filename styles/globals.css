@@ -7,7 +7,23 @@
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
 }
-
+.firstDiv
+{
+  display: flex;
+  flex-direction: row;
+  
+}
+.bg {
+    background-color: #F2F2F2;
+}
+.secondDiv
+{
+  display:flex;
+  flex-direction: row;
+}
+.img{
+  width:100px
+}
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -16,15 +32,10 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+body{
+  background-color: lightgray;
 }
+ 
 
 @layer utilities {
   .text-balance {

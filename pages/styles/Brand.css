@@ -1,0 +1,46 @@
+
+
+.brand {
+    background-color: #D9D9D9;
+    width: 300px;
+    height: 386px;
+    margin-left:40px;
+    margin-top:100px;
+    margin-bottom:30px;
+    padding-left:50px;
+    padding-top:80px;
+}
+
+.brandFirst
+{
+    display: flex;
+
+}
+.firstInput {
+    background-color: #454141;
+    border-radius:30px;
+}
+.priceSection {
+    display: flex;
+    
+}
+.price{
+    margin-top:120px;
+    margin-bottom:20px;
+}
+
+.checkbox{
+    margin-right:10px;
+    border-radius: 100px;
+}
+
+.product {
+    background-color: #D9D9D9;
+    width: 959px;
+    height: 386px;
+    margin-left: 40px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    padding: 20px;
+    overflow-y: auto;
+}

@@ -1,0 +1,30 @@
+.first
+{
+    display:flex;
+    justify-content:flex-end;
+}
+.main {
+    padding-top: 20px;
+    padding-right: 50px;
+}
+.margin{
+    margin-left: 10px;
+}
+.bg-color {
+    background-color:#D9D9D9;
+}
+
+.text-color {
+    color: #000000;
+}
+
+.round {
+    border-radius:30px;
+}
+
+.myCompanyText {
+    position: absolute;
+    font-size: 80px;
+    padding-left: 25px;
+    top: 10px;
+}
