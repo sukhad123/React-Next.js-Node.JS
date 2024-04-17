@@ -2,8 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "concurrently \"next dev\" \"node server.js\"",
+  "scripts": { 
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
