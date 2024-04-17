@@ -39,7 +39,7 @@ export default function SignUp() {
                     response.data = "";
                 }
                 //I got the response
-                console.log(response.data);
+                 
                 setError(response.data);
                 
             }). catch (err => {

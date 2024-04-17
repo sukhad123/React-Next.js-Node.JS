@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 let mongoDBConnectionString = "mongodb+srv://sukhadadhikari3:MofK5gmJxpipjE5k@cluster0.1iknzfi.mongodb.net/Vehicle?retryWrites=true&w=majority&appName=Cluster0";
 
 let Schema = mongoose.Schema;

@@ -9,14 +9,16 @@ import { useAtom } from 'jotai'
 
 //getting the data from the cart
 import { countAtom } from '@/store'
-
+import { getToken } from "@/lib/authenticate"
 //getting the product in the cart
-
  
-const fetcher = (url) => fetch(url).then((res) => res.json()); 
+const fetcher = (url) => fetch(url, { headers: { Authorization: `JWT ${getToken()}` } }).then((res) => res.json());
+console.log("This is token being printed from products page");
+console.log(getToken());
 export default function Products()
 
 {
+    /*const { data1, error1 } = useSWR("https://localhost:3000/products", fetcher);*/
   const [product, addProduct] = useAtom(countAtom)
   const { data, error } = useSWR('https://fakestoreapi.com/products', fetcher);
   if (error) return <div>Error: {error.message}</div>;

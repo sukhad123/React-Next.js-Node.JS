@@ -3,11 +3,14 @@ import HomeLayout from '@/components/HomeLayout'
 import axios from 'axios'
 import { useState } from 'react'
 import { useRouter } from 'next/router';
+import { authenticateUser } from '@/lib/authenticate'
 
 export default function SignIn() {
     const history = useRouter();
 
     const [error, setError] = useState('');
+    const [warning, setWarning] = useState('');
+
 
     const { register, handleSubmit, setValue, formState: { errors } } = useForm(({
         defaultValues: {
@@ -15,35 +18,42 @@ export default function SignIn() {
             password: ""
         }
     }))
-    function submitForm(data, e) {
+   async function submitForm(data, e) {
         console.log(data);
         e.preventDefault();
-        axios({
-            // Endpoint to send files
-            url: "http://localhost:5000/signIn",
-            method: "POST",
-            headers: {
-                'content-type': 'application/json',
-            },
-            data: data,
-        }).then(response => {
+        //this is way via axios
+        //axios({
+        //    // Endpoint to send files
+        //    url: "http://localhost:5000/signIn",
+        //    method: "POST",
+        //    headers: {
+        //        'content-type': 'application/json',
+        //    },
+        //    data: data,
+        //}).then(response => {
 
-            if (response.data == "Success")
-            {
-              
-                    history.push('/products');
-                   
-                }
-            //I got the response
-            console.log(response.data);
-            setError(response.data);
+        //    if (response.data == "Success")
+        //    {
 
-            // Handle success response
-            /* history.push('/signIn')*/
-        }).catch(err => {
-            //set the error if there is an error
-            console.log("Error:" + err);
-        });
+        //            history.push('/products');
+
+        //        }
+        //    //I got the response
+        //    console.log(response.data);
+        //    setError(response.data);
+
+        //    // Handle success response
+        //    /* history.push('/signIn')*/
+        //}).catch(err => {
+        //    //set the error if there is an error
+        //    console.log("Error:" + err);
+        //});
+        try {
+            await authenticateUser(data.userName, data.password);
+            history.push('/products');
+        } catch (err) {
+            setWarning(err.message);
+        }
     }
     return (<>
         <HomeLayout>
