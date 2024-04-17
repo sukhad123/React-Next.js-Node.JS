@@ -62,10 +62,10 @@ export default function Brand() {
                             <select name="brand" className="firstInput text-white"
                                 onChange={(event) => handleInputChange(event.target.value)}>
                                 <option value="" className="font-serif text-white"> </option>
-                                <option value="men's clothing" className="font-serif text-white">Mens Clothing</option>
+                            <option value="men;s clothing" className="font-serif text-white">Mens Clothing</option>
                                 <option value="jewelery" className="font-serif text-white" >Jewelery</option>
                                 <option value="electronics" className="font-serif text-white" >Electronics</option>
-                                <option value="women's clothing" className="font-serif text-white" >Women's Clothing</option></select
+                                <option value="women;s clothing" className="font-serif text-white" >Women's Clothing</option></select
                             >
                             <div className="price">
                                 <h1 className="font-serif">Price</h1>
