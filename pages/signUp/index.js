@@ -26,7 +26,7 @@ export default function SignUp() {
  
             axios({
                 // Endpoint to send files
-                url: "https://node-backend-x1oc.onrender.com/signUp",
+                url: "https://node-backend-1-t6x9.onrender.com/signUp",
                 method: "POST",
                 headers: {
                     'content-type': 'application/json',
